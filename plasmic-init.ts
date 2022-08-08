@@ -1,4 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import Homepage from "./components/Homepage";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -21,5 +22,7 @@ export const PLASMIC = initPlasmicLoader({
 // the /plasmic-host page of your nextjs app (for example,
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
+
+PLASMIC.substituteComponent(Homepage, "Homepage")
 
 // PLASMIC.registerComponent(...);
